@@ -1,0 +1,62 @@
+@import "src/theme";
+
+.pic-container {
+    height: 40%;
+}
+
+.pic {
+    background-image: url("src/assets/book-pages-blurred.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nopic-container {
+    height: 60%;
+}
+
+.absolute {
+    position: absolute;
+    //background-color: rgba(0, 0, 0, 0.33);
+    top: 0;
+    left: 0;
+}
+
+.arriba {
+    background-color: $primary;
+    border: none;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    border-radius: 0 0 0 0 !important;
+}
+
+.profile {
+    background-image: url("src/assets/profile.svg");
+    background-size: auto 100%;
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+
+.color-blue {
+    background-color: $thirt;
+}
+
+.arriba ul {
+    list-style-type: none !important;
+}
+
+.abajo {
+    border: none;
+    box-shadow: 0px 1px 5px -2px rgba(0,0,0,0.75);
+}
+
+.text-white-bold {
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75);
+}
+
+.button {
+    background-color: $primary;
+    color: white;
+    font-weight: bolder;
+}

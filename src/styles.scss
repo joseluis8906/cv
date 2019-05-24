@@ -1,2 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~bootstrap/scss/bootstrap";
+@import "src/theme";
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
+
+html, body {
+    min-height: 100% !important;
+    height: 100% !important;
+    background-color: $secondary;
+    font-size: 95%;
+}
+
+h1, h2, h3 ,h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
