@@ -1,0 +1,35 @@
+version: "3.9"
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - /opt/certs:/etc/nginx/certs:ro
+      - /etc/nginx/vhost.d
+      - /usr/share/nginx/html
+    label:
+      - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
+
+  letsencrypt:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    restart: always
+    volumes:
+      - /opt/certs:/etc/nginx/certs:rw
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    volumes_from:
+      - nginx-proxy:rw
+
+  cv:
+    image: joseluis8906/cv
+    restart: always
+    expose:
+      - "4000"
+    environment:
+      - VIRTUAL_HOST=josecaceres.info,www.josecaceres.info
+      - VIRTUAL_PORT=4000
+      - LETSENCRYPT_HOST=josecaceres.info,www.josecaceres.info
+      - LETSENCRYPT_EMAIL=joseluiscacere8906@gmail.com

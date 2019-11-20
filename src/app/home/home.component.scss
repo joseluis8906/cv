@@ -1,11 +1,15 @@
-@import "src/theme";
+@import "../../theme";
 
 .pic-container {
     height: 40%;
 }
 
+.text-white {
+  color: "white" !important;
+}
+
 .pic {
-    background-image: url("src/assets/lights-blured.jpg");
+    background-image: url("../../assets/lights-blured.jpg");
     background-position: center top;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -30,7 +34,7 @@
 }
 
 .profile {
-    background-image: url("src/assets/profile.svg");
+    background-image: url("../../assets/profile.svg");
     background-size: cover;
     background-position: left top;
     background-repeat: no-repeat;
